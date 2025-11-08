@@ -116,7 +116,7 @@ const App = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-between pr-2">
+        <div className="flex items-center justify-between pr-2 rounded-3xl hover:bg-[rgba(231,233,234,0.1)] transition duration-300 cursor-pointer p-2 mr-1">
           <div className="flex items-center">
             <img src={profilepic} alt="" className="h-8 rounded-2xl" />
 
@@ -128,7 +128,53 @@ const App = () => {
           <BsThreeDotsVertical />
         </div>
       </div>
-      <div className="grow border-x-[1px] border-[rgb(47,51,54)]">dgdg</div>
+      <div className="w-1/2 border-x-[1px] border-[rgb(47,51,54)] overflow-y-auto">
+        <div className="flex w-[46%] border-b border-b-[rgb(47,51,54)] fixed top-0">
+          <span className="hover:bg-[rgba(231,233,234,0.1)] transition duration-300 flex-grow py-3 text-center cursor-pointer font-bold backdrop-blur-sm bg-[rgba(0,0,0,0.5)]">
+            For You
+          </span>
+          <span className="hover:bg-[rgba(231,233,234,0.1)] transition duration-300 flex-grow py-3 text-center cursor-pointer font-bold backdrop-blur-sm bg-[rgba(0,0,0,0.5)]">
+            Following
+          </span>
+        </div>
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
+          quam provident aliquid cumque temporibus impedit nulla molestias,
+          delectus sint distinctio incidunt corrupti expedita iusto pariatur qui
+          omnis quisquam? Expedita, iusto? Expedita, corrupti dolor possimus
+          distinctio ea ab cum, maiores ducimus at architecto soluta nobis
+          veritatis. Unde nesciunt ea, enim illum quas blanditiis reprehenderit
+          accusantium cumque temporibus quidem a aliquam harum? Quo amet officia
+          debitis voluptates, asperiores alias obcaecati facilis molestiae culpa
+          eius aut iure nihil vel reiciendis provident similique illum
+          repudiandae excepturi doloremque, commodi recusandae quae maiores modi
+          dolorem! Rerum. Iste doloribus odio ducimus animi possimus voluptates
+          quas mollitia ratione eius nostrum alias adipisci expedita suscipit
+          molestiae qui deserunt id dolorum, perspiciatis eaque pariatur!
+          Quisquam rem magni assumenda ipsa excepturi? Odit velit minus maxime!
+          Architecto soluta distinctio ipsum praesentium voluptas, eveniet
+          expedita quibusdam adipisci dicta consequuntur eligendi autem alias
+          nisi, deserunt sequi non doloribus sit quod maiores qui error ullam.
+          Sint ipsa obcaecati esse harum. Laborum blanditiis neque itaque
+          dolorum sunt magni odio sequi illo voluptatum molestias accusamus
+          voluptate tempore, autem quasi eveniet doloribus nisi eum enim,
+          obcaecati optio temporibus. In voluptas unde quaerat. Exercitationem
+          omnis ipsum dolores. Possimus necessitatibus laboriosam doloribus
+          similique rem dignissimos recusandae libero, numquam voluptatibus
+          error, fugiat corporis sed dolorem cum impedit delectus omnis harum
+          dolore? Consectetur, sit inventore numquam minus praesentium quas,
+          consequuntur, totam omnis dolore minima harum adipisci? Facere
+          accusamus cupiditate quo. Quo consequatur recusandae laborum, optio
+          fugit quod. Porro dolorum ut voluptates eligendi. Dolore, quia
+          recusandae esse veniam beatae ad quam quas, repellat incidunt
+          doloremque ipsam dicta voluptates repellendus rerum omnis placeat hic
+          cupiditate, corporis distinctio quo totam quidem excepturi sapiente
+          tempore. Suscipit! Rem possimus reprehenderit voluptatibus dignissimos
+          iure labore necessitatibus asperiores quasi iste voluptas laboriosam
+          corrupti cumque mollitia omnis ipsam eos quas odit accusamus quos,
+          eaque sunt. Aliquam non obcaecati facere velit!
+        </div>
+      </div>
       <div className="rightsidebar w-1/4 pl-5 pt-2 pb-3 flex flex-col gap-3 relative overflow-y-auto">
         <div className="search flex rounded-3xl border-[rgb(47,51,54)] border  items-center p-2 fixed top-1 w-[22%] bg-black">
           <CiSearch className=" text-[rgb(117 117 117)]" />
