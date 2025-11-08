@@ -11,14 +11,14 @@ const App = () => {
           <svg
             viewBox="0 0 24 24"
             aria-hidden="true"
-            className="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-lrsllp r-1nao33i r-16y2uox r-8kz0gk w-11 p-2 cursor-pointer rounded-3xl hover:bg-[rgba(231,233,234,0.1)]"
+            className="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-lrsllp r-1nao33i r-16y2uox r-8kz0gk w-11 p-2 cursor-pointer rounded-3xl hover:bg-[rgba(231,233,234,0.1)] transition duration-300"
             fill="white"
           >
             <g>
               <path d="M21.742 21.75l-7.563-11.179 7.056-8.321h-2.456l-5.691 6.714-4.54-6.714H2.359l7.29 10.776L2.25 21.75h2.456l6.035-7.118 4.818 7.118h6.191-.008zM7.739 3.818L18.81 20.182h-2.447L5.29 3.818h2.447z"></path>
             </g>
           </svg>
-          <div className="flex p-2 w-fit cursor-pointer rounded-3xl hover:bg-[rgba(231,233,234,0.1)]">
+          <div className="flex p-2 w-fit cursor-pointer rounded-3xl hover:bg-[rgba(231,233,234,0.1)] transition duration-300">
             <svg
               viewBox="0 0 24 24"
               aria-hidden="true"
@@ -31,7 +31,7 @@ const App = () => {
             </svg>
             <span className="ml-2 text-xl flex items-center ">Home</span>
           </div>
-          <div className="flex p-2 w-fit cursor-pointer rounded-3xl hover:bg-[rgba(231,233,234,0.1)] ">
+          <div className="flex p-2 w-fit cursor-pointer rounded-3xl hover:bg-[rgba(231,233,234,0.1)] transition duration-300 ">
             <svg
               viewBox="0 0 24 24"
               aria-hidden="true"
@@ -44,7 +44,7 @@ const App = () => {
             </svg>
             <span className="ml-2 text-xl flex items-center">Explore</span>
           </div>
-          <div className="flex p-2 w-fit cursor-pointer rounded-3xl hover:bg-[rgba(231,233,234,0.1)] ">
+          <div className="flex p-2 w-fit cursor-pointer rounded-3xl hover:bg-[rgba(231,233,234,0.1)] transition duration-300 ">
             <svg
               viewBox="0 0 24 24"
               aria-hidden="true"
@@ -57,7 +57,7 @@ const App = () => {
             </svg>
             <span className="ml-2 text-xl flex items-center">Notification</span>
           </div>
-          <div className="flex p-2 w-fit cursor-pointer rounded-3xl hover:bg-[rgba(231,233,234,0.1)]">
+          <div className="flex p-2 w-fit cursor-pointer rounded-3xl hover:bg-[rgba(231,233,234,0.1)] transition duration-300">
             <svg
               viewBox="0 0 24 24"
               aria-hidden="true"
@@ -71,7 +71,7 @@ const App = () => {
             <span className="ml-2 text-xl flex items-center">Messages</span>
           </div>
 
-          <div className="flex p-2 w-fit cursor-pointer rounded-3xl hover:bg-[rgba(231,233,234,0.1)]">
+          <div className="flex p-2 w-fit cursor-pointer rounded-3xl hover:bg-[rgba(231,233,234,0.1)] transition duration-300">
             <svg
               viewBox="0 0 33 32"
               aria-hidden="true"
@@ -84,7 +84,7 @@ const App = () => {
             </svg>
             <span className="ml-2 text-xl flex items-center">Grok</span>
           </div>
-          <div className="flex p-2 w-fit cursor-pointer rounded-3xl hover:bg-[rgba(231,233,234,0.1)]">
+          <div className="flex p-2 w-fit cursor-pointer rounded-3xl hover:bg-[rgba(231,233,234,0.1)] transition duration-300">
             <svg
               viewBox="0 0 24 24"
               aria-hidden="true"
@@ -97,7 +97,7 @@ const App = () => {
             </svg>
             <span className="ml-2 text-xl flex items-center">Profile</span>
           </div>
-          <div className="flex p-2 w-fit cursor-pointer rounded-3xl hover:bg-[rgba(231,233,234,0.1)]">
+          <div className="flex p-2 w-fit cursor-pointer rounded-3xl hover:bg-[rgba(231,233,234,0.1)] transition duration-300">
             <svg
               viewBox="0 0 24 24"
               aria-hidden="true"
@@ -129,16 +129,80 @@ const App = () => {
         </div>
       </div>
       <div className="grow border-x-[1px] border-[rgb(47,51,54)]">dgdg</div>
-      <div className="w-1/4 pl-5 pt-2 flex-col gap-1 relative overflow-y-auto">
-        <div className="search flex rounded-3xl border-[rgb(47,51,54)] border  items-center p-2 fixed top-1 w-1/5 bg-black">
+      <div className="rightsidebar w-1/4 pl-5 pt-2 flex flex-col gap-3 relative overflow-y-auto">
+        <div className="search flex rounded-3xl border-[rgb(47,51,54)] border  items-center p-2 fixed top-1 w-[22%] bg-black">
           <CiSearch className=" text-[rgb(117 117 117)]" />
           <input
             type="search"
             name=""
             id=""
-            className=" ml-1 placeholder:text-[rgb(117 117 117) ] text-xs bg-black"
+            className=" ml-1 placeholder:text-[rgb(117,117,117) ] text-xs bg-black"
             placeholder="Search"
           />
+        </div>
+        <div className="subtopremium mt-10 rounded-3xl border-[rgb(47,51,54)] border p-2 pl-3 pb-3 flex flex-col gap-2">
+          <h1 className="font-bold text-lg">Subscribe to Premium</h1>
+          <p className="text-xs">
+            Subscribe to unlock new features and if eligible, receive a share of
+            revenue.
+          </p>
+          <button className="block cursor-pointer bg-[rgb(30,155,241)] p-1 rounded-3xl pl-3 pr-3 text-xs font-bold  hover:bg-[rgb(22,114,175)] transition duration-300 ">
+            Subscribe
+          </button>
+        </div>
+        <div className="divider h-[1px] bg-[rgb(47,51,54)]"></div>
+        <div className="happening flex flex-col   rounded-3xl border-[rgb(47,51,54)] border ">
+          <h1 className="font-bold text-lg p-2 mb-2">What's Happening</h1>
+          <div className="flex justify-between items-center cursor-pointer hover:bg-[rgba(231,233,234,0.1)] p-2 transition duration-300">
+            <div>
+              <p className="text-[rgb(90,94,98)] text-xs">
+                Chennai Super Kings · Trending
+              </p>
+              <p className="font-semibold text-xs">FLAT CHOR DHOBI</p>
+              <p className="text-[rgb(90,94,98)] text-xs">12.6K posts</p>
+            </div>
+            <BsThreeDotsVertical />
+          </div>
+          <div className="flex justify-between items-center cursor-pointer hover:bg-[rgba(231,233,234,0.1)] p-2 transition duration-300">
+            <div>
+              <p className="text-[rgb(90,94,98)] text-xs">
+                Chennai Super Kings · Trending
+              </p>
+              <p className="font-semibold text-xs">FLAT CHOR DHOBI</p>
+              <p className="text-[rgb(90,94,98)] text-xs">12.6K posts</p>
+            </div>
+            <BsThreeDotsVertical />
+          </div>
+          <div className="flex justify-between items-center cursor-pointer hover:bg-[rgba(231,233,234,0.1)] p-2 transition duration-300">
+            <div>
+              <p className="text-[rgb(90,94,98)] text-xs">
+                Chennai Super Kings · Trending
+              </p>
+              <p className="font-semibold text-xs">FLAT CHOR DHOBI</p>
+              <p className="text-[rgb(90,94,98)] text-xs">12.6K posts</p>
+            </div>
+            <BsThreeDotsVertical />
+          </div>
+          <div className="flex justify-between items-center cursor-pointer hover:bg-[rgba(231,233,234,0.1)] p-2 transition duration-300">
+            <div>
+              <p className="text-[rgb(90,94,98)] text-xs">
+                Chennai Super Kings · Trending
+              </p>
+              <p className="font-semibold text-xs">FLAT CHOR DHOBI</p>
+              <p className="text-[rgb(90,94,98)] text-xs">12.6K posts</p>
+            </div>
+            <BsThreeDotsVertical />
+          </div>
+          <div className="flex justify-between items-center cursor-pointer hover:bg-[rgba(231,233,234,0.1)] p-2 transition duration-300 rounded-b-3xl">
+            <div>
+              <p className="text-[rgb(90,94,98)] text-xs">
+                Chennai Super Kings · Trending
+              </p>
+              <p className="font-semibold text-xs">FLAT CHOR DHOBI</p>
+              <p className="text-[rgb(90,94,98)] text-xs">12.6K posts</p>
+            </div>
+            <BsThreeDotsVertical />
+          </div>
         </div>
       </div>
     </div>
