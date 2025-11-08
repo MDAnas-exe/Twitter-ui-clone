@@ -1,0 +1,148 @@
+import React from "react";
+import "./index.css";
+import profilepic from "./assets/images/profilepic.jpg";
+import { BsThreeDotsVertical } from "react-icons/bs";
+import { CiSearch } from "react-icons/ci";
+const App = () => {
+  return (
+    <div className="w-full h-screen bg-black text-white flex pl-10 pr-10 ">
+      <div className="w-1/4 flex flex-col justify-between pb-4 overflow-y-auto pt-3">
+        <div>
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            className="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-lrsllp r-1nao33i r-16y2uox r-8kz0gk w-11 p-2 cursor-pointer rounded-3xl hover:bg-[rgba(231,233,234,0.1)]"
+            fill="white"
+          >
+            <g>
+              <path d="M21.742 21.75l-7.563-11.179 7.056-8.321h-2.456l-5.691 6.714-4.54-6.714H2.359l7.29 10.776L2.25 21.75h2.456l6.035-7.118 4.818 7.118h6.191-.008zM7.739 3.818L18.81 20.182h-2.447L5.29 3.818h2.447z"></path>
+            </g>
+          </svg>
+          <div className="flex p-2 w-fit cursor-pointer rounded-3xl hover:bg-[rgba(231,233,234,0.1)]">
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              className="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e w-6"
+              fill="white"
+            >
+              <g>
+                <path d="M21.591 7.146L12.52 1.157c-.316-.21-.724-.21-1.04 0l-9.071 5.99c-.26.173-.409.456-.409.757v13.183c0 .502.418.913.929.913H9.14c.51 0 .929-.41.929-.913v-7.075h3.909v7.075c0 .502.417.913.928.913h6.165c.511 0 .929-.41.929-.913V7.904c0-.301-.158-.584-.408-.758z"></path>
+              </g>
+            </svg>
+            <span className="ml-2 text-xl flex items-center ">Home</span>
+          </div>
+          <div className="flex p-2 w-fit cursor-pointer rounded-3xl hover:bg-[rgba(231,233,234,0.1)] ">
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              className="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e w-6"
+              fill="white"
+            >
+              <g>
+                <path d="M10.25 3.75c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5c1.795 0 3.419-.726 4.596-1.904 1.178-1.177 1.904-2.801 1.904-4.596 0-3.59-2.91-6.5-6.5-6.5zm-8.5 6.5c0-4.694 3.806-8.5 8.5-8.5s8.5 3.806 8.5 8.5c0 1.986-.682 3.815-1.824 5.262l4.781 4.781-1.414 1.414-4.781-4.781c-1.447 1.142-3.276 1.824-5.262 1.824-4.694 0-8.5-3.806-8.5-8.5z "></path>
+              </g>
+            </svg>
+            <span className="ml-2 text-xl flex items-center">Explore</span>
+          </div>
+          <div className="flex p-2 w-fit cursor-pointer rounded-3xl hover:bg-[rgba(231,233,234,0.1)] ">
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              className="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e w-6"
+              fill="white"
+            >
+              <g>
+                <path d="M19.993 9.042C19.48 5.017 16.054 2 11.996 2s-7.49 3.021-7.999 7.051L2.866 18H7.1c.463 2.282 2.481 4 4.9 4s4.437-1.718 4.9-4h4.236l-1.143-8.958zM12 20c-1.306 0-2.417-.835-2.829-2h5.658c-.412 1.165-1.523 2-2.829 2zm-6.866-4l.847-6.698C6.364 6.272 8.941 4 11.996 4s5.627 2.268 6.013 5.295L18.864 16H5.134z"></path>
+              </g>
+            </svg>
+            <span className="ml-2 text-xl flex items-center">Notification</span>
+          </div>
+          <div className="flex p-2 w-fit cursor-pointer rounded-3xl hover:bg-[rgba(231,233,234,0.1)]">
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              className="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e w-6"
+              fill="white"
+            >
+              <g>
+                <path d="M1.998 5.5c0-1.381 1.119-2.5 2.5-2.5h15c1.381 0 2.5 1.119 2.5 2.5v13c0 1.381-1.119 2.5-2.5 2.5h-15c-1.381 0-2.5-1.119-2.5-2.5v-13zm2.5-.5c-.276 0-.5.224-.5.5v2.764l8 3.638 8-3.636V5.5c0-.276-.224-.5-.5-.5h-15zm15.5 5.463l-8 3.636-8-3.638V18.5c0 .276.224.5.5.5h15c.276 0 .5-.224.5-.5v-8.037z"></path>
+              </g>
+            </svg>
+            <span className="ml-2 text-xl flex items-center">Messages</span>
+          </div>
+
+          <div className="flex p-2 w-fit cursor-pointer rounded-3xl hover:bg-[rgba(231,233,234,0.1)]">
+            <svg
+              viewBox="0 0 33 32"
+              aria-hidden="true"
+              className="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e w-6"
+              fill="white"
+            >
+              <g>
+                <path d="M12.745 20.54l10.97-8.19c.539-.4 1.307-.244 1.564.38 1.349 3.288.746 7.241-1.938 9.955-2.683 2.714-6.417 3.31-9.83 1.954l-3.728 1.745c5.347 3.697 11.84 2.782 15.898-1.324 3.219-3.255 4.216-7.692 3.284-11.693l.008.009c-1.351-5.878.332-8.227 3.782-13.031L33 0l-4.54 4.59v-.014L12.743 20.544m-2.263 1.987c-3.837-3.707-3.175-9.446.1-12.755 2.42-2.449 6.388-3.448 9.852-1.979l3.72-1.737c-.67-.49-1.53-1.017-2.515-1.387-4.455-1.854-9.789-.931-13.41 2.728-3.483 3.523-4.579 8.94-2.697 13.561 1.405 3.454-.899 5.898-3.22 8.364C1.49 30.2.666 31.074 0 32l10.478-9.466"></path>
+              </g>
+            </svg>
+            <span className="ml-2 text-xl flex items-center">Grok</span>
+          </div>
+          <div className="flex p-2 w-fit cursor-pointer rounded-3xl hover:bg-[rgba(231,233,234,0.1)]">
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              className="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e w-6"
+              fill="white"
+            >
+              <g>
+                <path d="M5.651 19h12.698c-.337-1.8-1.023-3.21-1.945-4.19C15.318 13.65 13.838 13 12 13s-3.317.65-4.404 1.81c-.922.98-1.608 2.39-1.945 4.19zm.486-5.56C7.627 11.85 9.648 11 12 11s4.373.85 5.863 2.44c1.477 1.58 2.366 3.8 2.632 6.46l.11 1.1H3.395l.11-1.1c.266-2.66 1.155-4.88 2.632-6.46zM12 4c-1.105 0-2 .9-2 2s.895 2 2 2 2-.9 2-2-.895-2-2-2zM8 6c0-2.21 1.791-4 4-4s4 1.79 4 4-1.791 4-4 4-4-1.79-4-4z"></path>
+              </g>
+            </svg>
+            <span className="ml-2 text-xl flex items-center">Profile</span>
+          </div>
+          <div className="flex p-2 w-fit cursor-pointer rounded-3xl hover:bg-[rgba(231,233,234,0.1)]">
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              className="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e w-6"
+              fill="white"
+            >
+              <g>
+                <path d="M3.75 12c0-4.56 3.69-8.25 8.25-8.25s8.25 3.69 8.25 8.25-3.69 8.25-8.25 8.25S3.75 16.56 3.75 12zM12 1.75C6.34 1.75 1.75 6.34 1.75 12S6.34 22.25 12 22.25 22.25 17.66 22.25 12 17.66 1.75 12 1.75zm-4.75 11.5c.69 0 1.25-.56 1.25-1.25s-.56-1.25-1.25-1.25S6 11.31 6 12s.56 1.25 1.25 1.25zm9.5 0c.69 0 1.25-.56 1.25-1.25s-.56-1.25-1.25-1.25-1.25.56-1.25 1.25.56 1.25 1.25 1.25zM13.25 12c0 .69-.56 1.25-1.25 1.25s-1.25-.56-1.25-1.25.56-1.25 1.25-1.25 1.25.56 1.25 1.25z"></path>
+              </g>
+            </svg>
+            <span className="ml-2 text-xl flex items-center">More</span>
+          </div>
+          <div className="flex pt-2 pb-2 ">
+            <div className="w-full p-3 bg-white text-black text-center mr-10 rounded-3xl font-bold  ">
+              Post
+            </div>
+          </div>
+        </div>
+        <div className="flex items-center justify-between pr-2">
+          <div className="flex items-center">
+            <img src={profilepic} alt="" className="h-8 rounded-2xl" />
+
+            <div className="flex flex-col ml-2">
+              <span className="text-sm font-bold">Md Anas</span>
+              <span className="text-sm text-gray-400">@2004Anasxoxo</span>
+            </div>
+          </div>
+          <BsThreeDotsVertical />
+        </div>
+      </div>
+      <div className="grow border-x-[1px] border-[rgb(47,51,54)]">dgdg</div>
+      <div className="w-1/4 pl-5 pt-2 flex-col gap-1 relative overflow-y-auto">
+        <div className="search flex rounded-3xl border-[rgb(47,51,54)] border  items-center p-2 fixed top-1 w-1/5 bg-black">
+          <CiSearch className=" text-[rgb(117 117 117)]" />
+          <input
+            type="search"
+            name=""
+            id=""
+            className=" ml-1 placeholder:text-[rgb(117 117 117) ] text-xs bg-black"
+            placeholder="Search"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default App;
