@@ -129,7 +129,7 @@ const App = () => {
         </div>
       </div>
       <div className="grow border-x-[1px] border-[rgb(47,51,54)]">dgdg</div>
-      <div className="rightsidebar w-1/4 pl-5 pt-2 flex flex-col gap-3 relative overflow-y-auto">
+      <div className="rightsidebar w-1/4 pl-5 pt-2 pb-3 flex flex-col gap-3 relative overflow-y-auto">
         <div className="search flex rounded-3xl border-[rgb(47,51,54)] border  items-center p-2 fixed top-1 w-[22%] bg-black">
           <CiSearch className=" text-[rgb(117 117 117)]" />
           <input
@@ -153,7 +153,7 @@ const App = () => {
         <div className="divider h-[1px] bg-[rgb(47,51,54)]"></div>
         <div className="happening flex flex-col   rounded-3xl border-[rgb(47,51,54)] border ">
           <h1 className="font-bold text-lg p-2 mb-2">What's Happening</h1>
-          <div className="flex justify-between items-center cursor-pointer hover:bg-[rgba(231,233,234,0.1)] p-2 transition duration-300">
+          <div className="flex justify-between items-center cursor-pointer hover:bg-[rgba(231,233,234,0.1)] p-3 transition duration-300">
             <div>
               <p className="text-[rgb(90,94,98)] text-xs">
                 Chennai Super Kings · Trending
@@ -163,7 +163,7 @@ const App = () => {
             </div>
             <BsThreeDotsVertical />
           </div>
-          <div className="flex justify-between items-center cursor-pointer hover:bg-[rgba(231,233,234,0.1)] p-2 transition duration-300">
+          <div className="flex justify-between items-center cursor-pointer hover:bg-[rgba(231,233,234,0.1)] p-3 transition duration-300">
             <div>
               <p className="text-[rgb(90,94,98)] text-xs">
                 Chennai Super Kings · Trending
@@ -173,7 +173,7 @@ const App = () => {
             </div>
             <BsThreeDotsVertical />
           </div>
-          <div className="flex justify-between items-center cursor-pointer hover:bg-[rgba(231,233,234,0.1)] p-2 transition duration-300">
+          <div className="flex justify-between items-center cursor-pointer hover:bg-[rgba(231,233,234,0.1)] p-3 transition duration-300">
             <div>
               <p className="text-[rgb(90,94,98)] text-xs">
                 Chennai Super Kings · Trending
@@ -183,7 +183,7 @@ const App = () => {
             </div>
             <BsThreeDotsVertical />
           </div>
-          <div className="flex justify-between items-center cursor-pointer hover:bg-[rgba(231,233,234,0.1)] p-2 transition duration-300">
+          <div className="flex justify-between items-center cursor-pointer hover:bg-[rgba(231,233,234,0.1)] p-3 transition duration-300">
             <div>
               <p className="text-[rgb(90,94,98)] text-xs">
                 Chennai Super Kings · Trending
@@ -193,17 +193,27 @@ const App = () => {
             </div>
             <BsThreeDotsVertical />
           </div>
-          <div className="flex justify-between items-center cursor-pointer hover:bg-[rgba(231,233,234,0.1)] p-2 transition duration-300 rounded-b-3xl">
-            <div>
-              <p className="text-[rgb(90,94,98)] text-xs">
-                Chennai Super Kings · Trending
-              </p>
-              <p className="font-semibold text-xs">FLAT CHOR DHOBI</p>
-              <p className="text-[rgb(90,94,98)] text-xs">12.6K posts</p>
-            </div>
-            <BsThreeDotsVertical />
+          <div className="flex items-center cursor-pointer hover:bg-[rgba(231,233,234,0.1)] p-3 transition duration-300 rounded-b-3xl">
+            <span className="text-[rgb(26,139,215)] text-xs">Show more</span>
           </div>
         </div>
+        <footer>
+          <ul className="text-xs text-[rgb(90,94,98)] flex flex-wrap gap-2">
+            <li>Terms of Service</li>
+            <li> |</li>
+            <li>Privacy Policy</li>
+            <li> |</li>
+            <li>Cookie Policy</li>
+            <li></li>
+            <li>Accessibility</li>
+            <li>|</li>
+            <li>Ads info</li>
+            <li>|</li>
+            <li>More</li>
+            <li>|</li>
+            <li>© 2025 X Corp.</li>
+          </ul>
+        </footer>
       </div>
     </div>
   );
