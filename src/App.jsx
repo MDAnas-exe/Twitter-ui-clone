@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./index.css";
 import profilepic from "./assets/images/profilepic.jpg";
 import { BsThreeDotsVertical } from "react-icons/bs";
-import { CiSearch } from "react-icons/ci";
+import { FaImage } from "react-icons/fa";
+import { CiSearch, CiCircleList } from "react-icons/ci";
+import { BsEmojiSmile } from "react-icons/bs";
+import { FaLocationDot } from "react-icons/fa6";
+
+import { MdOutlineGifBox } from "react-icons/md";
 const App = () => {
+  const textAreaRef = useRef(null);
+  const [value, setValue] = useState("");
+  useEffect(() => {
+    const el = textAreaRef.current;
+    el.style.height = "auto";
+    el.style.height = el.scrollHeight + "px";
+  }, [value]);
+
   return (
     <div className="w-full h-screen bg-black text-white flex pl-10 pr-10 ">
       <div className="w-1/4 flex flex-col justify-between pb-4 overflow-y-auto pt-3">
@@ -129,7 +142,7 @@ const App = () => {
         </div>
       </div>
       <div className="w-1/2 border-x-[1px] border-[rgb(47,51,54)] overflow-y-auto">
-        <div className="flex w-[46%] border-b border-b-[rgb(47,51,54)] fixed top-0">
+        <div className="flex w-full border-b border-b-[rgb(47,51,54)] sticky top-0">
           <span className="hover:bg-[rgba(231,233,234,0.1)] transition duration-300 flex-grow py-3 text-center cursor-pointer font-bold backdrop-blur-sm bg-[rgba(0,0,0,0.5)]">
             For You
           </span>
@@ -137,42 +150,41 @@ const App = () => {
             Following
           </span>
         </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
-          quam provident aliquid cumque temporibus impedit nulla molestias,
-          delectus sint distinctio incidunt corrupti expedita iusto pariatur qui
-          omnis quisquam? Expedita, iusto? Expedita, corrupti dolor possimus
-          distinctio ea ab cum, maiores ducimus at architecto soluta nobis
-          veritatis. Unde nesciunt ea, enim illum quas blanditiis reprehenderit
-          accusantium cumque temporibus quidem a aliquam harum? Quo amet officia
-          debitis voluptates, asperiores alias obcaecati facilis molestiae culpa
-          eius aut iure nihil vel reiciendis provident similique illum
-          repudiandae excepturi doloremque, commodi recusandae quae maiores modi
-          dolorem! Rerum. Iste doloribus odio ducimus animi possimus voluptates
-          quas mollitia ratione eius nostrum alias adipisci expedita suscipit
-          molestiae qui deserunt id dolorum, perspiciatis eaque pariatur!
-          Quisquam rem magni assumenda ipsa excepturi? Odit velit minus maxime!
-          Architecto soluta distinctio ipsum praesentium voluptas, eveniet
-          expedita quibusdam adipisci dicta consequuntur eligendi autem alias
-          nisi, deserunt sequi non doloribus sit quod maiores qui error ullam.
-          Sint ipsa obcaecati esse harum. Laborum blanditiis neque itaque
-          dolorum sunt magni odio sequi illo voluptatum molestias accusamus
-          voluptate tempore, autem quasi eveniet doloribus nisi eum enim,
-          obcaecati optio temporibus. In voluptas unde quaerat. Exercitationem
-          omnis ipsum dolores. Possimus necessitatibus laboriosam doloribus
-          similique rem dignissimos recusandae libero, numquam voluptatibus
-          error, fugiat corporis sed dolorem cum impedit delectus omnis harum
-          dolore? Consectetur, sit inventore numquam minus praesentium quas,
-          consequuntur, totam omnis dolore minima harum adipisci? Facere
-          accusamus cupiditate quo. Quo consequatur recusandae laborum, optio
-          fugit quod. Porro dolorum ut voluptates eligendi. Dolore, quia
-          recusandae esse veniam beatae ad quam quas, repellat incidunt
-          doloremque ipsam dicta voluptates repellendus rerum omnis placeat hic
-          cupiditate, corporis distinctio quo totam quidem excepturi sapiente
-          tempore. Suscipit! Rem possimus reprehenderit voluptatibus dignissimos
-          iure labore necessitatibus asperiores quasi iste voluptas laboriosam
-          corrupti cumque mollitia omnis ipsam eos quas odit accusamus quos,
-          eaque sunt. Aliquam non obcaecati facere velit!
+        <div className="post p-2 flex border-b-[1px] border-[rgb(47,51,54)]">
+          <img src={profilepic} alt="" className="h-8 rounded-3xl" />
+          <div className="flex  flex-col flex-grow">
+            <textarea
+              value={value}
+              ref={textAreaRef}
+              placeholder="What's happening"
+              className="flex-grow placeholder:text-[rgb(47,51,54)] bg-black outline-none ml-2 resize-none  border-b-[1px] border-[rgb(47,51,54)]"
+              onChange={(e) => {
+                setValue(e.target.value);
+              }}
+            />
+            <div className="mt-2 flex flex-row justify-between items-center ">
+              <ul className="flex justify-between w-2/5">
+                <li className="p-1 cursor-pointer hover:bg-blue-100 transition duration-300 rounded-3xl">
+                  <FaImage className="text-[rgb(29,155,240)]  " />
+                </li>
+                <li className="p-1 cursor-pointer hover:bg-blue-100 transition duration-300 rounded-3xl">
+                  <MdOutlineGifBox className="text-[rgb(29,155,240)]  " />
+                </li>
+                <li className="p-1 cursor-pointer hover:bg-blue-100 transition duration-300 rounded-3xl">
+                  <CiCircleList className="text-[rgb(29,155,240)]  " />
+                </li>
+                <li className="p-1 cursor-pointer hover:bg-blue-100 transition duration-300 rounded-3xl">
+                  <BsEmojiSmile className="text-[rgb(29,155,240)]  " />
+                </li>
+                <li className="p-1 cursor-pointer hover:bg-blue-100 transition duration-300 rounded-3xl">
+                  <FaLocationDot className="text-[rgb(29,155,240)]  " />
+                </li>
+              </ul>
+              <button className=" w-[15%] p-2 rounded-3xl bg-[rgb(120,122,122)]">
+                Post
+              </button>
+            </div>
+          </div>
         </div>
       </div>
       <div className="rightsidebar w-1/4 pl-5 pt-2 pb-3 flex flex-col gap-3 relative overflow-y-auto">
@@ -182,7 +194,7 @@ const App = () => {
             type="search"
             name=""
             id=""
-            className=" ml-1 placeholder:text-[rgb(117,117,117) ] text-xs bg-black"
+            className=" ml-1 placeholder:text-[rgb(117,117,117) ] text-xs bg-black outline-none flex-grow"
             placeholder="Search"
           />
         </div>
