@@ -1,13 +1,14 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./index.css";
 import profilepic from "./assets/images/profilepic.jpg";
+import postimage from "./assets/images/postimage.jpg";
 import { BsThreeDotsVertical } from "react-icons/bs";
-import { FaImage } from "react-icons/fa";
-import { CiSearch, CiCircleList } from "react-icons/ci";
+import { FaImage, FaCheckCircle, FaComment } from "react-icons/fa";
+import { CiSearch, CiCircleList, CiHeart, CiBookmark } from "react-icons/ci";
 import { BsEmojiSmile } from "react-icons/bs";
-import { FaLocationDot } from "react-icons/fa6";
-
-import { MdOutlineGifBox } from "react-icons/md";
+import { FaLocationDot, FaRetweet } from "react-icons/fa6";
+import { MdBarChart } from "react-icons/md";
+import { MdOutlineGifBox, MdOutlineFileUpload } from "react-icons/md";
 const App = () => {
   const textAreaRef = useRef(null);
   const [value, setValue] = useState("");
@@ -183,6 +184,186 @@ const App = () => {
               <button className=" w-[15%] p-2 rounded-3xl bg-[rgb(120,122,122)]">
                 Post
               </button>
+            </div>
+          </div>
+        </div>
+        <div className="content flex p-2 border-b-[1px] border-[rgb(47,51,54)]">
+          <img src={profilepic} alt="" className="h-10 mt-1 rounded-3xl mr-1" />
+
+          <div className="flex-grow flex-col">
+            <div className="flex justify-between">
+              <div>
+                <div className="flex items-center">
+                  <span className="font-bold">Theo - t3.gg</span>
+                  <span className="flex items-center mx-1">
+                    <FaCheckCircle className="text-[rgb(29,155,240)]" />
+                  </span>
+                  <span className="text-[rgb(117,117,117)]">@theo · 14h</span>
+                </div>
+                <span className="text-sm">
+                  Windows is an incredible operating system with no flaws
+                  whatsoever
+                </span>
+              </div>
+              <div className="flex items-center text-4xl">
+                <svg
+                  viewBox="0 0 33 32"
+                  aria-hidden="true"
+                  class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi"
+                  fill="white"
+                >
+                  <g>
+                    <path d="M12.745 20.54l10.97-8.19c.539-.4 1.307-.244 1.564.38 1.349 3.288.746 7.241-1.938 9.955-2.683 2.714-6.417 3.31-9.83 1.954l-3.728 1.745c5.347 3.697 11.84 2.782 15.898-1.324 3.219-3.255 4.216-7.692 3.284-11.693l.008.009c-1.351-5.878.332-8.227 3.782-13.031L33 0l-4.54 4.59v-.014L12.743 20.544m-2.263 1.987c-3.837-3.707-3.175-9.446.1-12.755 2.42-2.449 6.388-3.448 9.852-1.979l3.72-1.737c-.67-.49-1.53-1.017-2.515-1.387-4.455-1.854-9.789-.931-13.41 2.728-3.483 3.523-4.579 8.94-2.697 13.561 1.405 3.454-.899 5.898-3.22 8.364C1.49 30.2.666 31.074 0 32l10.478-9.466"></path>
+                  </g>
+                </svg>
+                <BsThreeDotsVertical className="ml-1" />
+              </div>
+            </div>
+
+            <img
+              src={postimage}
+              alt=""
+              className="border-[1px] border-[rgb(47,51,54)] rounded-2xl mt-2"
+            />
+            <div className="postbuttons flex flex-grow mt-2 justify-between text-[rgb(117,117,117)] text-sm">
+              <div className="w-[75%] flex justify-between">
+                <div className="flex items-center gap-2">
+                  <FaComment /> <span>85</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <FaRetweet /> <span>21</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CiHeart /> <span>636</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <MdBarChart /> <span>60K</span>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <CiBookmark />
+                <MdOutlineFileUpload />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="content flex p-2 border-b-[1px] border-[rgb(47,51,54)]">
+          <img src={profilepic} alt="" className="h-10 mt-1 rounded-3xl mr-1" />
+
+          <div className="flex-grow flex-col">
+            <div className="flex justify-between">
+              <div>
+                <div className="flex items-center">
+                  <span className="font-bold">Theo - t3.gg</span>
+                  <span className="flex items-center mx-1">
+                    <FaCheckCircle className="text-[rgb(29,155,240)]" />
+                  </span>
+                  <span className="text-[rgb(117,117,117)]">@theo · 14h</span>
+                </div>
+                <span className="text-sm">
+                  Windows is an incredible operating system with no flaws
+                  whatsoever
+                </span>
+              </div>
+              <div className="flex items-center text-4xl">
+                <svg
+                  viewBox="0 0 33 32"
+                  aria-hidden="true"
+                  class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi"
+                  fill="white"
+                >
+                  <g>
+                    <path d="M12.745 20.54l10.97-8.19c.539-.4 1.307-.244 1.564.38 1.349 3.288.746 7.241-1.938 9.955-2.683 2.714-6.417 3.31-9.83 1.954l-3.728 1.745c5.347 3.697 11.84 2.782 15.898-1.324 3.219-3.255 4.216-7.692 3.284-11.693l.008.009c-1.351-5.878.332-8.227 3.782-13.031L33 0l-4.54 4.59v-.014L12.743 20.544m-2.263 1.987c-3.837-3.707-3.175-9.446.1-12.755 2.42-2.449 6.388-3.448 9.852-1.979l3.72-1.737c-.67-.49-1.53-1.017-2.515-1.387-4.455-1.854-9.789-.931-13.41 2.728-3.483 3.523-4.579 8.94-2.697 13.561 1.405 3.454-.899 5.898-3.22 8.364C1.49 30.2.666 31.074 0 32l10.478-9.466"></path>
+                  </g>
+                </svg>
+                <BsThreeDotsVertical className="ml-1" />
+              </div>
+            </div>
+
+            <img
+              src={postimage}
+              alt=""
+              className="border-[1px] border-[rgb(47,51,54)] rounded-2xl mt-2"
+            />
+            <div className="postbuttons flex flex-grow mt-2 justify-between text-[rgb(117,117,117)] text-sm">
+              <div className="w-[75%] flex justify-between">
+                <div className="flex items-center gap-2">
+                  <FaComment /> <span>85</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <FaRetweet /> <span>21</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CiHeart /> <span>636</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <MdBarChart /> <span>60K</span>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <CiBookmark />
+                <MdOutlineFileUpload />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="content flex p-2 border-b-[1px] border-[rgb(47,51,54)]">
+          <img src={profilepic} alt="" className="h-10 mt-1 rounded-3xl mr-1" />
+
+          <div className="flex-grow flex-col">
+            <div className="flex justify-between">
+              <div>
+                <div className="flex items-center">
+                  <span className="font-bold">Theo - t3.gg</span>
+                  <span className="flex items-center mx-1">
+                    <FaCheckCircle className="text-[rgb(29,155,240)]" />
+                  </span>
+                  <span className="text-[rgb(117,117,117)]">@theo · 14h</span>
+                </div>
+                <span className="text-sm">
+                  Windows is an incredible operating system with no flaws
+                  whatsoever
+                </span>
+              </div>
+              <div className="flex items-center text-4xl">
+                <svg
+                  viewBox="0 0 33 32"
+                  aria-hidden="true"
+                  class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1xvli5t r-1hdv0qi"
+                  fill="white"
+                >
+                  <g>
+                    <path d="M12.745 20.54l10.97-8.19c.539-.4 1.307-.244 1.564.38 1.349 3.288.746 7.241-1.938 9.955-2.683 2.714-6.417 3.31-9.83 1.954l-3.728 1.745c5.347 3.697 11.84 2.782 15.898-1.324 3.219-3.255 4.216-7.692 3.284-11.693l.008.009c-1.351-5.878.332-8.227 3.782-13.031L33 0l-4.54 4.59v-.014L12.743 20.544m-2.263 1.987c-3.837-3.707-3.175-9.446.1-12.755 2.42-2.449 6.388-3.448 9.852-1.979l3.72-1.737c-.67-.49-1.53-1.017-2.515-1.387-4.455-1.854-9.789-.931-13.41 2.728-3.483 3.523-4.579 8.94-2.697 13.561 1.405 3.454-.899 5.898-3.22 8.364C1.49 30.2.666 31.074 0 32l10.478-9.466"></path>
+                  </g>
+                </svg>
+                <BsThreeDotsVertical className="ml-1" />
+              </div>
+            </div>
+
+            <img
+              src={postimage}
+              alt=""
+              className="border-[1px] border-[rgb(47,51,54)] rounded-2xl mt-2"
+            />
+            <div className="postbuttons flex flex-grow mt-2 justify-between text-[rgb(117,117,117)] text-sm">
+              <div className="w-[75%] flex justify-between">
+                <div className="flex items-center gap-2">
+                  <FaComment /> <span>85</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <FaRetweet /> <span>21</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CiHeart /> <span>636</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <MdBarChart /> <span>60K</span>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <CiBookmark />
+                <MdOutlineFileUpload />
+              </div>
             </div>
           </div>
         </div>
