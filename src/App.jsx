@@ -19,7 +19,7 @@ const App = () => {
   }, [value]);
 
   return (
-    <div className="lg:w-[80%] md:w-[90%]  w-full h-screen bg-black text-white flex mx-auto justify-between">
+    <div className="w-11/12 h-screen bg-black text-white flex mx-auto justify-between">
       <div className="lg:w-1/4 w-36 flex flex-col justify-between pb-4 overflow-y-auto pt-3">
         <div className="lg:inline flex flex-col items-center">
           <svg
